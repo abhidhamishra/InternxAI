@@ -25,7 +25,7 @@ Keep responses engaging, concise, and actionable. Use emojis to keep the tone wa
 @st.cache_resource
 def load_model():
     endpoint = HuggingFaceEndpoint(
-        repo_id="Qwen/Qwen2.5-1.5B-Instruct",
+        repo_id="meta-llama/Meta-Llama-3-8B-Instruct",
         task="text-generation"
     )
     return ChatHuggingFace(llm=endpoint)
@@ -161,4 +161,5 @@ if user_input:
             reply, updated_history = chat(user_input, st.session_state.conversation_history)
         st.markdown(reply)
     st.session_state.conversation_history = updated_history
+
     st.session_state.display_messages.append({"role": "assistant", "content": reply})
