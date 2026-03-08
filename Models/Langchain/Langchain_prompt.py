@@ -7,7 +7,7 @@ import re
 load_dotenv()
 
 endpoint = HuggingFaceEndpoint(
-    repo_id="mistralai/Mistral-7B-Instruct-v0.2",
+    repo_id="meta-llama/Meta-Llama-3-8B-Instruct",
     task="text-generation",
     max_new_tokens=1200
 )
@@ -112,3 +112,4 @@ if st.button("Mental Health Assistance"):
     st.markdown("---")
 
     st.caption("💡 Tip: Practice these steps consistently for best results. Your mental fitness journey starts today!")
+
